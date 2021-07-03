@@ -1,0 +1,506 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+<style>
+*{
+	padding:0px;
+	margin:0px;
+}
+body{
+  background-image:url(Image%20project/background.jpg);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+}
+.box1{
+	width:50%;
+	height:30px;
+	background: linear-gradient(to right, #fff , #999);
+	position:absolute; left:50%; z-index:-1;
+}
+.box2{
+	width:50%;
+	height:30px;
+	background: linear-gradient(to right, #999 , #fff);
+	position:absolute; right:50%;  z-index:-1;
+}
+.box2 b{
+	z-index:2;
+	font-size:20px;
+	color:#000;
+	height:30px;
+	line-height:30px;
+	margin-left:20px;
+}
+.box2 span{
+	color:#000;
+	font-size:20px;
+}
+.box2 a{
+	text-decoration:none;
+}
+
+/*---------------Menu 0---------------*/
+.header{
+	 
+	float:right;
+	
+}
+.menu0{
+	display:inline-table;
+	
+	height:30px;
+	line-height:30px;
+	
+}
+.menu0 a{
+	padding:10px;
+	text-decoration:none;
+	color:#000;
+	font-weight:bold;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.menu0 a:hover{
+	color:#3CF;
+}
+/*---------End Menu 0---------*/
+
+/*----------------Search----------*/
+.search-box-wrapper{
+	display:inline-flex;
+	height:29px;
+}
+.search-box-input{
+	font-size:inherit;
+	border:0.2em solid 	#A8A8A8   ;
+	border-radius:0.5em 0 0 0.5em;
+	padding: 0.2em 0.5em;
+}
+.search-box-button{
+	font-size:inherit;
+	border:0.2em solid 	#A8A8A8     ;
+	border-radius:0 0.5em 0.5em 0;
+	background-color:      #A8A8A8       ;
+	border-left:0px;
+	padding:0 0.5em;
+}
+/*----------End Search----------*/
+.video-title{
+	position:absolute; top:100px; 
+	background-color:#3C6;
+	width:100%;
+	height:120px;
+}
+/*-----------------------Menu 1------------------*/
+.menu1{
+	position:absolute; top:220px; 
+	background-color:#FFF;
+	width:100%;
+}
+.menu1 a{
+	
+	margin-left:10px;
+	padding:20px;
+	padding-left:140px;
+	color: #39F;
+	text-decoration:none;
+	height:30px;
+	line-height:30px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.menu1 a:hover{
+	color:#999;
+}
+/*-----------------End Menu 1------------------*/
+.videos{
+	width:1280px;
+	height:550px;
+	margin-left:auto; margin-right:auto; 
+	position:relative; top:400px;
+	
+
+}
+.playlist{
+	position:absolute; left:77%; top: 0%;
+	width:297px;
+	overflow:auto;
+	height:550px;
+}
+iframe{
+	position:absolute; top:0%;
+}
+.video-title h1{
+	color:#FFF;
+	padding-top: 15px;
+	padding-left:150px;
+}
+
+/*---------------Footer-------------*/
+footer{
+	width:100%;
+	height:600px;
+	background:#D0D0D0   ;
+}
+.footer-title{
+	width:1160px;
+	height:auto;
+	margin-left:auto; margin-right:auto;
+	position:relative;
+}
+.football{
+	width:auto;
+	padding-top:40px;
+}
+.fanzone{
+	width:auto;
+	position:absolute; left:350px; top:40px;
+}
+.members{
+	width:auto;
+	position:absolute; left:700px; top:40px;
+}
+.shop{
+	width:auto;
+	position:absolute; left:1050px; top:40px;
+}
+#f-title{
+	font-size:15px;
+}
+.footer-title p{
+	font-size:13px;
+	color:#666666;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+	cursor:pointer;
+}
+.footer-title p:hover{
+	color:#000;
+}
+/*--language--*/
+.language{
+	margin-top:80px;
+	width:630px;
+	height:auto;
+	
+	margin-left:auto; margin-right:auto;
+	position:relative;
+}
+.English{
+	width:90px;
+	height:35px;
+	border-right:1px dotted #666666;
+}
+.English p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.English p:hover{
+	color:#000;
+}
+
+.Français{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:90px; top:0px;
+}
+.Français p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Français p:hover{
+	color:#000;
+}
+
+.Deutsch{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:180px; top:0px;
+}
+.Deutsch p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Deutsch p:hover{
+	color:#000;
+}
+
+.Vietnam{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:270px; top:0px;
+}
+.Vietnam p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Vietnam p:hover{
+	color:#000;
+}
+
+.Español{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:360px; top:0px;
+}
+.Español p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Español p:hover{
+	color:#000;
+}
+
+.Italiano{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:450px; top:0px;
+}
+.Italiano p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Italiano p:hover{
+	color:#000;
+}
+
+.Português{
+	width:90px;
+	height:35px;
+
+	position:absolute; left:540px; top:0px;
+}
+.Português p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Português p:hover{
+	color:#000;
+}
+.x{
+	margin-top:20px;
+	width:1160px;
+	height:10px;
+	border-bottom:1px solid #999;
+	margin-left:auto; margin-right:auto;
+}
+.logo{
+	width:460px;
+	position:relative;
+	margin-left:auto; margin-right:auto;
+	margin-top:50px;
+}
+.sub-logo1{
+		width:41px;
+		height:40px;
+}
+
+.sub-logo2{
+	position:absolute; left:70px; top:0px;	
+}
+.sub-logo3{
+	position:absolute; left:140px; top:0px;
+}
+.sub-logo4{
+	position:absolute; left:210px;  top:0px;
+}
+.sub-logo5{
+	position:absolute; left:280px; top:0px;
+}
+.sub-logo6{
+	position:absolute; left:350px;  top:0px;
+}
+.sub-logo7{
+	position:absolute; left:420px;  top:0px;
+}
+#n1{
+	text-align:center;
+	margin-top:60px;
+	font-size:12px;
+}
+#n2{
+	text-align:center;
+	font-size:12px;
+}
+#mo{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+#mo:hover{
+	opacity:0.5;
+}
+#noi{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+#noi:hover{
+	transform:translate;
+}
+
+.sponsor{
+	margin-top:600px;
+	width:100%;
+	height:50px;
+	background:#333;
+}
+.sponsor p{
+	padding-top:15px;
+	padding-left:1200px;
+	color:#999;
+	font-size:13px;
+}
+.sponsor strong{
+	font-size:16px;
+	color:#FFF;
+	font-family:"MS Serif", "New York", serif;
+	font-style:italic;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="box1"></div>
+<div class="box2"><b>MinhTriCR7</b><span>.com</span></div>
+
+<div class="header">
+<!--Menu 0-->
+<div class="menu0">
+<a href="Project%20Live%20scores.html" >Live scores <i class="fa fa-futbol-o" aria-hidden="true"></i> </a>
+<a href="Project%20Store.html" >Store <i class="fa fa-usd" aria-hidden="true"></i> </a>
+<a href="Project%20Contact.html" >Contact <i class="fa fa-comments" aria-hidden="true"></i></a>
+<a href="#" >Login <i class="fa fa-user" aria-hidden="true"></i></a>
+<a href="#" >All sections <i class="fa fa-bars" aria-hidden="true"></i></a>
+
+</div>
+<!--Menu 0-->
+
+<!--Search-->
+<div class="search-box-wrapper">
+<input type="text" placeholder="Search..." class="search-box-input">
+<button class="search-box-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+</div>
+<!--Search-->
+</div>
+
+
+<div  class="video-title"><h1>Videos</h1></div>
+<!-----------------------------------Menu 1------------------------------------>
+<div  class="menu1">
+<a href="#">All Videos</a>
+<a href="#">Highlights</a>
+<a href="#">Photo     </a>
+</div>
+
+<!--  End Menu 1-->
+
+<div class="videos">
+
+<iframe width="1000" height="550" name="tri"  frameborder="0" src="Image project/iframe.jpg"></iframe>
+
+<div class="playlist">  
+  
+<a href="https://www.youtube.com/embed/0pMEWWXcZqY" target="tri">
+<img src="Image project/video 1.png" width="280" height="150"></a>
+
+<a href="https://www.youtube.com/embed/ha0l_dpS-YI" target="tri">
+<img src="Image project/video 2.png" width="280" height="150"></a>
+
+<a href="https://www.youtube.com/embed/QyUSzUEIUqg" target="tri">
+<img src="Image project/video 3.png" width="280" height="150"></a>
+
+<a href="https://www.youtube.com/embed/FEtVsHXWT7o" target="tri">
+<img src="Image project/video 4.png" width="280" height="150"></a>
+
+</div>
+
+</div>
+<div class="sponsor"><p> sponsor by <strong> HAIVL.COM <i class="fa fa-fort-awesome" aria-hidden="true"></i></strong></p></div>
+<!-- Footer -->
+<footer>
+<div class="footer-title">
+
+<div class="football"><p id="f-title"><b>FOOTBALL</b></p> <p>Fixtures</p> <p>News</p> <p>Video Gallery</p> <p>Photo Gallery</p> <p>Squad</p> <p>Academy</p> </div>
+<div class="fanzone"><p id="f-title"><b>FAN ZONE</b></p> <p>Videos</p> <p>Photos</p> <p>Fan Clubs</p> <p>Social Networks</p> <p>Games</p> <p>Wallpapers</p> <p>Publications</p> </div>
+<div class="members"><p id="f-title"><b>MEMBERS</b></p> <p>Members services</p> <p>Member club</p> <p>Season Ticket </p> <p>Arrangements</p> </div>
+<div class="shop"><p id="f-title"><b>SHOP</b></p> <p>Hospitality</p> <p>See all sponsors</p> <p>Site map</p>
+
+</div>
+
+<div class="language">
+
+<div class="English"><p> English </p> </div>
+<div class="Français"><p>   Français  </p></div>
+<div class="Deutsch">  <p>  Deutsch   </p>  </div>
+<div class="Vietnam">  <p>   Vietnam  </p>  </div>
+<div class="Español">   <p> Español    </p> </div>
+<div class="Italiano">  <p>   Italiano  </p> </div>
+<div class="Português">  <p>   Português  </p>  </div>
+
+</div>
+
+<div class="x"></div>
+
+<div class="logo">
+
+<div class="sub-logo1"><a href="https://twitter.com/?lang=vi"><img src="Image project/logo 1.png" width="41" height="40" usemap="#Map"></a></div>
+<div class="sub-logo2"><a href="https://www.facebook.com/minhtri.nguyen.77128" target="_blank"><img src="Image project/logo 2.png" width="41" height="40"></a> </div>
+<div class="sub-logo3"><a href="https://mail.google.com" target="_blank"><img src="Image project/logo 3.png" width="41" height="40"></a> </div>
+<div class="sub-logo4"><a href="https://www.instagram.com/?hl=vi" target="_blank"><img src="Image project/logo 4.png" width="41" height="40"></a> </div>
+<div class="sub-logo5"><a href="https://www.linkedin.com/company/uefa" target="_blank"><img src="Image project/logo 5.png" width="41" height="40"></a>  </div>
+<div class="sub-logo6"><a href="https://uefa.newsmarket.com/" target="_blank"><img src="Image project/logo 6.png" width="41" height="40"></a>  </div>
+<div class="sub-logo7"><a href="https://www.youtube.com/" target="_blank"><img src="Image project/logo 7.png" width="41" height="40"></a> </div>
+
+</div>
+
+<p id="n1" >© 1998-2017 UEFA. All rights reserved.</p>
+<p id="n2"> The UEFA word, the UEFA logo and all marks related to UEFA competitions, are protected by trademarks and/or copyright of UEFA. No use for commercial purposes may be made of such trademarks. Use of UEFA.com signifies your agreement to the Terms and Conditions and Privacy Policy.</p>
+
+</footer>
+
+
+
+</body>
+</html>

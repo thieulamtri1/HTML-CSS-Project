@@ -1,0 +1,923 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+<!--Slide Show -->
+<!--Copy phần này paste vào thẻ head-->
+    <script type="text/javascript" src="Slideshow/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="Slideshow/js/jssor.slider-22.2.8.mini.js"></script>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-22.2.8.mini.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1000); //Hiệu chỉnh độ rộng slideshow
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script> <!--Kết thúc Javascript-->
+
+ <!-- Copy phần này vào đầu thẻ body-->
+    <style>
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url(Image%20project/b05.png) no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 12 css */
+        /*
+        .jssora12l                  (normal)
+        .jssora12r                  (normal)
+        .jssora12l:hover            (normal mouseover)
+        .jssora12r:hover            (normal mouseover)
+        .jssora12l.jssora12ldn      (mousedown)
+        .jssora12r.jssora12rdn      (mousedown)
+        */
+        .jssora12l, .jssora12r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 30px;
+            height: 46px;
+            cursor: pointer;
+            background: url(Image%20project/a12.png) no-repeat;
+            overflow: hidden;
+        }
+        .jssora12l { background-position: -16px -37px; }
+        .jssora12r { background-position: -75px -37px; }
+        .jssora12l:hover { background-position: -136px -37px; }
+        .jssora12r:hover { background-position: -195px -37px; }
+        .jssora12l.jssora12ldn { background-position: -256px -37px; }
+        .jssora12r.jssora12rdn { background-position: -315px -37px; }
+    </style><!-- Kết thúc phần CSS-->
+    
+<!-- End Slide Show -->
+
+
+<style>
+
+*{
+	padding:0px;
+	margin:0px;
+}
+#home{
+	
+	z-index:2;
+	font-size:20px;
+	color:#000;
+	height:30px;
+	line-height:30px;
+	margin-left:20px;
+}
+#com{
+	
+	margin-left:0px;
+	color:#000;
+	font-size:20px;
+}
+#a{
+	position:absolute;
+	text-decoration:none;
+}
+
+	
+.box1{
+	width:50%;
+	height:30px;
+	background: linear-gradient(to right, #fff , #999);
+	position:absolute; left:50%; z-index:-1;
+}
+.box2{
+	width:50%;
+	height:30px;
+	background: linear-gradient(to right, #999 , #fff);
+	position:absolute; right:50%;  z-index:-1;
+}
+
+/*---------------Menu 0---------------*/
+.header{
+	float:right;
+}
+.menu0{
+	display:inline-table;
+	
+	height:30px;
+	line-height:30px;
+	
+}
+.menu0 a{
+	padding:10px;
+	text-decoration:none;
+	color:#000;
+	font-weight:bold;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.menu0 a:hover{
+	color:#3CF;
+}
+/*---------End Menu 0---------*/
+/*----------------Search----------*/
+.search-box-wrapper{
+	display:inline-flex;
+	
+	height:29px;
+}
+.search-box-input{
+	font-size:inherit;
+	border:0.2em solid 	#A8A8A8   ;
+	border-radius:0.5em 0 0 0.5em;
+	padding: 0.2em 0.5em;
+}
+.search-box-button{
+	font-size:inherit;
+	border:0.2em solid 	#A8A8A8     ;
+	border-radius:0 0.5em 0.5em 0;
+	background-color:      #A8A8A8       ;
+	border-left:0px;
+	padding:0 0.5em;
+}
+/*----------End Search----------*/
+.blank{
+	width:100%;
+	height:30px;	
+}
+/*--------Menu slide --------*/
+.menu{
+	cursor:pointer;
+	position:relative;
+	width:1000px;
+	height:35px;
+	margin-top:100px; margin-left:auto; margin-right:auto;
+}
+.menu b{
+	position:absolute; left:40px; top:10px;
+}
+.clubs{
+	background-color:#CCC;
+	width:166.666px;
+	height:40px;
+    border:1px solid #333;
+	position:relative;
+	
+}
+.clubs:hover .clubs-down{
+    opacity:1;
+	z-index:2;
+}
+#down{
+	padding-left:30px;
+}
+.clubs-down{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+	position:absolute; top:40px; 
+	z-index:-1;
+	opacity:0;
+	
+}
+.footballl{
+	background-color:#CCC;
+	width:166.666px;
+	height:40px;
+	border:1px solid #333; border-left:none;
+	position:absolute; left:166.666px; top:0px;
+}
+.apparel{
+	background-color:#CCC;
+	width:166.666px;
+	height:40px;
+	border:1px solid #333; border-left:none;
+	position:absolute; left:333.332px; top:0px;
+}
+.souvenirs{
+	background-color:#CCC;
+	width:166.666px;
+	height:40px;
+	border:1px solid #333; border-left:none;
+	position:absolute; left:499.998px; top:0px;
+}
+.memorabilia{
+	background-color:#CCC;
+	width:166.666px; 
+	height:40px;
+	border:1px solid #333; border-left:none;
+	position:absolute; left:666.664px; top:0px;
+}
+.sale{
+	background-color:#CCC;
+	width:166.666px;
+	height:40px;
+	border:1px solid #333;  border-left:none;
+	position:absolute; left:833.33px; top:0px;
+}
+.slide img{
+	cursor:pointer;
+}
+.slide{
+    width: 1000px;
+	height:650px;
+    cursor:pointer;
+	margin-top:5px;
+	margin-left:auto; margin-right:auto;	
+}
+
+
+/*-----------Explore new Products -------------*/
+.products{
+	background-color:#FFF;
+	width:1000px;
+	height:1500px;
+	position:relative;
+	border-right:1px solid #000; border-left:1px solid #000;
+	margin-left:auto; margin-right:auto;
+	-webkit-box-shadow: 1px 9px 5px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 9px 5px 6px rgba(0,0,0,0.75);
+    box-shadow: 1px 9px 5px 6px rgba(0,0,0,0.75);
+}
+.title-explore-new-products{
+	width:1000px;
+	height:150px;
+	position:relative;
+}
+.border-left-title{
+	width:100px;
+	height:10px;
+	border-bottom:1px solid #333;
+	position:absolute; top:88px; left:170px;
+}
+.explore-new-products{
+    width:350px;
+	height:50px;
+	font-size:25px;
+	position:absolute; left:325px; top:80px;	
+}
+.border-right-title{
+	width:100px;
+	height:10px;
+	border-bottom:1px solid #333;
+	position:absolute; top:88px; left:720px;
+}
+.products p{
+	font-size:18px;
+	padding-top:10px; 
+	padding-left:100px;
+}
+/*----------Uniform 1 --------------*/
+.uniform-1{
+	width:250px;
+	height:290px;
+}
+
+.up{
+	cursor:pointer;
+	width:250px;
+	height:250px;
+	overflow:hidden;
+}
+.up img{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.detail{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.up:hover img{
+	transform:translateY(-250px);
+}
+.up:hover .detail{
+	transform:translateY(-250px);
+}
+.detail{
+	width:250px;
+	height:250px;
+}
+.detail ul{
+	padding-left:25px;
+	padding-top:30px;
+}
+.detail li{
+	padding-top:10px;
+}
+/*-----------------END Uniform 1 --------------*/
+.uniform-2{
+	position:absolute; top:150px; left:250px;
+}
+.uniform-3{
+	position:absolute; top:150px; left:500px;
+}
+.uniform-4{
+	position:absolute; top:150px; left:750px;
+}
+/*------------------Best Seller----------------*/
+.title-best-sellers{
+	width:1000px;
+	height:150px;
+	position:relative;
+}
+.title-best-sellers .explore-new-products{
+	width:350px;
+	height:50px;
+	font-size:25px;
+	position:absolute; left:400px; top:80px;	
+}
+.uniform-6{
+	position:absolute; top:590px; left:250px;
+}
+.uniform-7{
+	position:absolute; top:590px; left:500px;
+}
+.uniform-8{
+	position:absolute; top:590px; left:750px;
+}
+.Souvenirs{
+	margin-top:100px;
+	position:relative;
+	width:1000px;
+	
+}
+.Souvenirs #xxx{
+	cursor:pointer;
+	position:absolute; left:0px; 
+}
+.Souvenirs #yyy{
+	cursor:pointer;
+	position:absolute; right:2px; 
+}
+.sponsor{
+	margin-top:50px;
+	width:100%;
+	height:50px;
+	background:#333;
+	
+}
+
+
+/*---------------Footer-------------*/
+footer{
+	width:100%;
+	height:600px;
+	background:#D0D0D0   ;
+}
+.footer-title{
+	width:1160px;
+	height:auto;
+	margin-left:auto; margin-right:auto;
+	position:relative;
+}
+.football{
+	width:auto;
+	padding-top:40px;
+}
+.fanzone{
+	width:auto;
+	position:absolute; left:350px; top:40px;
+}
+.members{
+	width:auto;
+	position:absolute; left:700px; top:40px;
+}
+.shop{
+	width:auto;
+	position:absolute; left:1050px; top:40px;
+}
+#f-title{
+	font-size:15px;
+}
+.footer-title p{
+	font-size:13px;
+	color:#666666;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+	cursor:pointer;
+}
+.footer-title p:hover{
+	color:#000;
+}
+/*--language--*/
+.language{
+	margin-top:80px;
+	width:630px;
+	height:auto;
+	
+	margin-left:auto; margin-right:auto;
+	position:relative;
+}
+.English{
+	width:90px;
+	height:35px;
+	border-right:1px dotted #666666;
+}
+.English p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.English p:hover{
+	color:#000;
+}
+
+.Français{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:90px; top:0px;
+}
+.Français p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Français p:hover{
+	color:#000;
+}
+
+.Deutsch{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:180px; top:0px;
+}
+.Deutsch p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Deutsch p:hover{
+	color:#000;
+}
+
+.Vietnam{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:270px; top:0px;
+}
+.Vietnam p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Vietnam p:hover{
+	color:#000;
+}
+
+.Español{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:360px; top:0px;
+}
+.Español p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Español p:hover{
+	color:#000;
+}
+
+.Italiano{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:450px; top:0px;
+}
+.Italiano p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Italiano p:hover{
+	color:#000;
+}
+
+.Português{
+	width:90px;
+	height:35px;
+
+	position:absolute; left:540px; top:0px;
+}
+.Português p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Português p:hover{
+	color:#000;
+}
+.x{
+	margin-top:20px;
+	width:1160px;
+	height:10px;
+	border-bottom:1px solid #999;
+	margin-left:auto; margin-right:auto;
+}
+.logo{
+	width:460px;
+	position:relative;
+	margin-left:auto; margin-right:auto;
+	margin-top:50px;
+}
+.sub-logo1{
+		width:41px;
+		height:40px;
+}
+
+.sub-logo2{
+	position:absolute; left:70px; top:0px;	
+}
+.sub-logo3{
+	position:absolute; left:140px; top:0px;
+}
+.sub-logo4{
+	position:absolute; left:210px;  top:0px;
+}
+.sub-logo5{
+	position:absolute; left:280px; top:0px;
+}
+.sub-logo6{
+	position:absolute; left:350px;  top:0px;
+}
+.sub-logo7{
+	position:absolute; left:420px;  top:0px;
+}
+#n1{
+	text-align:center;
+	margin-top:60px;
+	font-size:12px;
+}
+#n2{
+	text-align:center;
+	font-size:12px;
+}
+#mo{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+#mo:hover{
+	opacity:0.5;
+}
+#noi{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+#noi:hover{
+	transform:translate;
+}
+
+.sponsor{
+	margin-top:150px;
+	width:100%;
+	height:50px;
+	background:#333;
+}
+.sponsor p{
+	padding-top:15px;
+	padding-left:1200px;
+
+	color:#999;
+	font-size:13px;
+}
+.sponsor strong{
+	font-size:16px;
+	color:#FFF;
+	font-family:"MS Serif", "New York", serif;
+	font-style:italic;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<a id="a" href="Project.html"><b id="home">MinhTriCR7</b><span id="com">.com</span></a>
+
+<div class="header">
+<!--Menu 0-->
+<div class="menu0">
+<a href="Project%20Live%20scores.html" >Live scores <i class="fa fa-futbol-o" aria-hidden="true"></i> </a>
+<a href="Project%20Store.html#" >Store <i class="fa fa-usd" aria-hidden="true"></i> </a>
+<a href="Project%20Contact.html" >Contact <i class="fa fa-comments" aria-hidden="true"></i></a>
+<a href="#" >Login <i class="fa fa-user" aria-hidden="true"></i></a>
+<a href="#" >All sections <i class="fa fa-bars" aria-hidden="true"></i></a>
+
+</div>
+<!--Menu 0-->
+
+
+<!--Search-->
+<div class="search-box-wrapper">
+<input type="text" placeholder="Search..." class="search-box-input">
+<button class="search-box-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+</div>
+<!--Search-->
+</div>
+
+<div class="blank"></div>
+
+<!--Menu slide -->
+<div class="menu">
+<div class="clubs"><b>CLUBS <i id="down" class="fa fa-angle-double-down" aria-hidden="true"></i></b> <div class="clubs-down"><img src="Image project/CLUBS(Stores).png" width="1000" height="554" /></div></div>
+
+<div class="footballl"><b>FOOTBALL</b> </div>
+
+<div class="apparel"><b>APPAREL</b></div>
+
+<div class="souvenirs"><b>SOUVENIRS</b></div>
+
+<div class="memorabilia"><b>MEMORABILIA</b></div>
+
+<div class="sale"><b>SALE</b></div>
+
+</div>
+
+
+<div class="slide">
+
+<!-- Copy phần này paste vào vị trí muốn hiển thị slideshow-->
+   
+   <!--Hiệu chỉnh độ rộng và độ cao cho slideshow-->
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:650px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+         <!--Hiệu chỉnh độ rộng và độ cao cho slideshow-->
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:650px;overflow:hidden;">
+            
+           <!-- Mỗi images hiển thị trên slideshow chèn vào mỗi thẻ div-->
+            <div>
+                <img data-u="image" src="Image project/Slide(Store)/ucl_trophies.png" />
+            </div>
+            
+            <div>
+                <img data-u="image" src="Image project/Slide(Store)/UCL-Champs2.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="Image project/Slide(Store)/UCL_Apparel.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="Image project/Slide(Store)/Sept-Jerseys-Banner.jpg" />
+            </div>
+            
+            
+            
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+    </div>
+    <!-- #endregion Jssor Slider End -->
+
+</div>
+
+
+<!-- Product -->
+<div class="products"> 
+
+<div class="title-explore-new-products"> 
+<div class="border-left-title"></div><div class="explore-new-products"> <b> EXPLORE NEW PRODUCTS!</b></div>     <div class="border-right-title"></div>
+</div>
+
+<div class="uniform-1"><div class="up"><img src="Image project/Products(Store)/1.jpg" width="250" height="250"/><div class="detail">
+                                                                                                                                                                                <ul>
+                                                                                                                                                                                   <li> ADIDAS </li> 
+                                                                                                                                                                                   <li> MU Women's Home Jersy 17/18</li>
+                                                                                                                                                                                   <li> Marterial: 100% Polyester</li>
+                                                                                                                                                                                   <li> Type of team badge: Sewn On</li>
+                                                                                                                                                                                   <li> Replica or Authentic: Replica</li>
+                                                                                                                                                                                   <li>What Women will wear on their quest for UEFA Europa League glory. </li>
+                                                                                                                                                                                  </ul> </div></div> 
+<p><strong>$79.99</strong></div>
+
+<div class="uniform-2"><div class="up"><img src="Image project/Products(Store)/2.jpg" width="250" height="250"/><div class="detail">
+                                                                                                                                                                                <ul>
+                                                                                                                                                                                   <li> ADIDAS </li> 
+                                                                                                                                                                                   <li> Juventus Home Jersy 17/18</li>
+                                                                                                                                                                                   <li> Marterial: 100% Polyester</li>
+                                                                                                                                                                                   <li> Type of team badge: Sewn On</li>
+                                                                                                                                                                                   <li> Replica or Authentic: Replica</li>
+                                                                                                                                                                                   <li> Get ready for the new season in the latest version of the famous zebra stripes, worn by Juventus since 1903.</li>
+                                                                                                                                                                                  </ul> </div></div> 
+<p><strong>$89.99</strong></div>
+
+
+<div class="uniform-3"><div class="up"><img src="Image project/Products(Store)/3.jpg" width="250" height="250"/><div class="detail">
+                                                                                                                                                                               <ul>
+                                                                                                                                                                                   <li> ADIDAS </li> 
+                                                                                                                                                                                   <li> MU Home Jersy 17/18</li>
+                                                                                                                                                                                   <li> Marterial: 100% Polyester</li>
+                                                                                                                                                                                   <li> Type of team badge: Heat Press</li>
+                                                                                                                                                                                   <li> Replica or Authentic: Authentic</li>
+                                                                                                                                                                                   <li> Show your pride in the most successful team                                                                                                                                                                                                                in England. </li>
+                                                                                                                                                                                </ul> </div></div> 
+<p><strong>$199.99</strong></div>
+
+<div class="uniform-4"><div class="up"><img src="Image project/Products(Store)/4.jpg" width="240" height="250"/><div class="detail">
+                                                                                                                                                                                <ul>
+                                                                                                                                                                                   <li> ADIDAS </li> 
+                                                                                                                                                                                   <li> REAL MADRID Home Jersy 17/18</li>
+                                                                                                                                                                                   <li> Marterial: 100% Polyester</li>
+                                                                                                                                                                                   <li> Type of team badge: Heat Press</li>
+                                                                                                                                                                                   <li> Replica or Authentic: Authentic</li>
+                                                                                                                                                                                   <li> Cheer the 2016-17 La Liga and Champions                                                                                                                                                                                                               League Winners. </li>
+                                                                                                                                                                                  </ul> </div></div> 
+<p><strong>$119.99</strong></div>
+
+<div class="title-best-sellers"> 
+<div class="border-left-title"></div><div class="explore-new-products"> <b>BEST SELLERS</b></div>  <div class="border-right-title"></div>
+</div>
+
+<div class="uniform-1"><div class="up"><img src="Image project/Products(Store)/5.jpg" width="230" height="250"/><div class="detail">
+                                                                                                                                                                                <ul>
+                                                                                                                                                                                  
+                                                                                                                                                                                   <li> COVER: Machine-stitched construction (nylon wound carcass-TPU) for soft touch and durability.</li>                                                                                                                                                                                   <li>BLADDER: Butyl</li>
+                                                                                                                                                                                   <li> Replica or Authentic: Replica</li>
+                                                                                                                                                                                   <li>Orders shipping outside the U.S. are subject to customs fees.</li>
+                                                                                                                                                                                  </ul> </div></div> 
+<p><strong>$19.99</strong></div>
+
+
+<div class="uniform-6"><div class="up"><img src="Image project/Products(Store)/6.jpg" width="250" height="250"/><div class="detail">
+                                                                                                                                                                                <ul>
+                                                                                                                                                                                  
+                                                                                                                                                                                   <li> Whether you're on the team bus or the city bus, you can rep PSG in these cool headphones.</li>                                                                                                                                                                                   <li>3.5mm audio jack</li>
+                                                                                                                                                                                   <li> 1.5m Y shapped cord</li>
+                                                                                                                                                                                   <li>40mm driver</li>
+                                                                                                                                                                                  </ul> </div></div> 
+<p><strong>$29.99</strong></div>
+
+
+<div class="uniform-7"><div class="up"><img src="Image project/Products(Store)/7.jpg" width="250" height="250"/><div class="detail">
+                                                                                                                                                                                <ul>
+                                                                                                                                                                                  
+                                                                                                                                                                                   <li>Marterial: Ceramic</li>                                                                                                                                                                                   <li>Made in: China</li>
+                                                                                                                                                                                   <li>Celebrate the European Championships</li>
+                                                                                                                                                                                   <li>Drink with the finest when you enjoy your morning coffee with this UEFA Champions League mug.</li>
+                                                                                                                                                                                  </ul> </div></div> 
+<p><strong>$12.99</strong></div>
+
+
+<div class="uniform-8"><div class="up"><img src="Image project/Products(Store)/8.jpg" width="240" height="250"/><div class="detail">
+                                                                                                                                                                                <ul>
+                                                                                                                                                                                  
+                                                                                                                                                                                   <li>Marterial: Silver</li>                                                                                                                                                                                   <li>Made in: China</li>
+                                                                                                                                                                                   <li>Replica or Authentic: Replica</li>
+                                                                                                                                                                                   <li>Replica pin of the UEFA Women's Champions League trophy. Official collectible for the fan.</li>
+                                                                                                                                                                                  </ul> </div></div> 
+<p><strong>$9.99</strong></div>
+
+
+
+<div class="Souvenirs">
+
+<div><img id="xxx"  src="Image project/Souvenirs.png" width="495" height="386"/> </div> 
+<div><img id="yyy"  src="Image project/Souvenirs 2.png" width="495" height="386"/> </div> 
+
+</div>
+
+</div>
+
+<div class="sponsor"><p> sponsor by <strong> HAIVL.COM <i class="fa fa-fort-awesome" aria-hidden="true"></i></strong></p></div>
+<!-- Footer -->
+<footer>
+<div class="footer-title">
+
+<div class="football"><p id="f-title"><b>FOOTBALL</b></p> <p>Fixtures</p> <p>News</p> <p>Video Gallery</p> <p>Photo Gallery</p> <p>Squad</p> <p>Academy</p> </div>
+<div class="fanzone"><p id="f-title"><b>FAN ZONE</b></p> <p>Videos</p> <p>Photos</p> <p>Fan Clubs</p> <p>Social Networks</p> <p>Games</p> <p>Wallpapers</p> <p>Publications</p> </div>
+<div class="members"><p id="f-title"><b>MEMBERS</b></p> <p>Members services</p> <p>Member club</p> <p>Season Ticket </p> <p>Arrangements</p> </div>
+<div class="shop"><p id="f-title"><b>SHOP</b></p> <p>Hospitality</p> <p>See all sponsors</p> <p>Site map</p>
+
+</div>
+
+<div class="language">
+
+<div class="English"><p> English </p> </div>
+<div class="Français"><p>   Français  </p></div>
+<div class="Deutsch">  <p>  Deutsch   </p>  </div>
+<div class="Vietnam">  <p>   Vietnam  </p>  </div>
+<div class="Español">   <p> Español    </p> </div>
+<div class="Italiano">  <p>   Italiano  </p> </div>
+<div class="Português">  <p>   Português  </p>  </div>
+
+</div>
+
+<div class="x"></div>
+
+<div class="logo">
+
+<div class="sub-logo1"><a href="https://twitter.com/?lang=vi"><img src="Image project/logo 1.png" width="41" height="40" usemap="#Map"></a></div>
+<div class="sub-logo2"><a href="https://www.facebook.com/minhtri.nguyen.77128" target="_blank"><img src="Image project/logo 2.png" width="41" height="40"></a> </div>
+<div class="sub-logo3"><a href="https://mail.google.com" target="_blank"><img src="Image project/logo 3.png" width="41" height="40"></a> </div>
+<div class="sub-logo4"><a href="https://www.instagram.com/?hl=vi" target="_blank"><img src="Image project/logo 4.png" width="41" height="40"></a> </div>
+<div class="sub-logo5"><a href="https://www.linkedin.com/company/uefa" target="_blank"><img src="Image project/logo 5.png" width="41" height="40"></a>  </div>
+<div class="sub-logo6"><a href="https://uefa.newsmarket.com/" target="_blank"><img src="Image project/logo 6.png" width="41" height="40"></a>  </div>
+<div class="sub-logo7"><a href="https://www.youtube.com/" target="_blank"><img src="Image project/logo 7.png" width="41" height="40"></a> </div>
+
+</div>
+
+<p id="n1" >© 1998-2017 UEFA. All rights reserved.</p>
+<p id="n2"> The UEFA word, the UEFA logo and all marks related to UEFA competitions, are protected by trademarks and/or copyright of UEFA. No use for commercial purposes may be made of such trademarks. Use of UEFA.com signifies your agreement to the Terms and Conditions and Privacy Policy.</p>
+
+</footer>
+
+
+
+
+</body>
+</html>

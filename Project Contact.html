@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+<style>
+*{
+	padding:0px;
+	margin:0px;
+}
+
+	
+.box1{
+	width:50%;
+	height:30px;
+	background: linear-gradient(to right, #fff , #999);
+	position:absolute; left:50%; z-index:-1;
+}
+.box2{
+	width:50%;
+	height:30px;
+	background: linear-gradient(to right, #999 , #fff);
+	position:absolute; right:50%;  z-index:2;
+}
+.box2 #MinhTriCR7{
+	z-index:2;
+	font-size:20px;
+	color:#000;
+	height:30px;
+	line-height:30px;
+	margin-left:20px;
+}
+.box2 #com{
+	color:#000;
+	font-size:20px;
+}
+.box2 a{
+	text-decoration:none;
+}
+/*---------------Menu 0---------------*/
+.header{
+	float:right;
+}
+.menu0{
+	display:inline-table;
+	
+	height:30px;
+	line-height:30px;
+	
+}
+.menu0 a{
+	padding:10px;
+	text-decoration:none;
+	color:#000;
+	font-weight:bold;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.menu0 a:hover{
+	color:#3CF;
+}
+/*---------End Menu 0---------*/
+/*----------------Search----------*/
+.search-box-wrapper{
+	display:inline-flex;
+	
+	height:29px;
+}
+.search-box-input{
+	font-size:inherit;
+	border:0.2em solid 	#A8A8A8   ;
+	border-radius:0.5em 0 0 0.5em;
+	padding: 0.2em 0.5em;
+}
+.search-box-button{
+	font-size:inherit;
+	border:0.2em solid 	#A8A8A8     ;
+	border-radius:0 0.5em 0.5em 0;
+	background-color:      #A8A8A8       ;
+	border-left:0px;
+	padding:0 0.5em;
+}
+/*----------End Search----------*/
+
+.blank{
+	z-index:-2;
+	width:100%;
+	height:30px;	
+}
+body{
+  background-image:url(http://deskbg.com/s3/wpp/7/7508/football-nissan-stadium-desktop-background.jpg);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+}
+
+.contact-us{
+	width:1200px;
+	height:auto;
+	margin-top:100px;
+	margin-left:auto; margin-right:auto; 
+}
+.contact-us #Contact{
+	font-size:30px;
+	color:#0C6;
+}
+.contact-us #x{
+	z-index:2;
+	font-size:36px;
+	color:#000;
+}
+.contact-us #y{
+	color:#000;
+	font-size:30px;
+}
+.content{
+	z-index:2;
+	background-color:#FFF;
+	position:relative;
+	width:1200px;
+	height:1100px;
+	border:1px solid #CCC;
+	margin-left:auto; margin-right:auto; margin-top:50px;
+	-webkit-box-shadow: 0px 2px 13px 6px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 2px 13px 6px rgba(0,0,0,0.75);
+box-shadow: 0px 2px 13px 6px rgba(0,0,0,0.75);
+
+}
+.branch-1{
+	width:380px;
+	margin-left:120px; margin-top:20px;
+}
+#title{
+	font-size:1.5em;
+	color:#C33;
+	font-weight:bold;
+}
+
+#info{	
+    margin-top:10px;
+    font-size:13px;
+	font-weight:100;
+	color:#000;
+}
+.branch-2{
+	width:380px;
+	height:140px;
+	position:absolute; right:20px; top:20px;
+}
+.branch-3{
+	width:380px;
+	height:140px;
+	position:absolute; left:120px; top:250px;
+}
+.branch-4{
+	width:380px;
+	height:140px;
+	position:absolute; right:20px; top:250px;
+}
+.form{
+	padding: 50px 0px 0px 50px;
+	overflow:hidden;
+	width:600px;
+	border:1px solid #000;
+	background-color:#CCCCCC;
+	font-family: Helvetica; 
+	font-size:13px;
+	margin-top:300px;
+}
+form div{
+	margin-bottom:10px;
+}
+label{
+	font-weight:bold;
+	line-height:23px;
+	float:left;
+}
+form input#lastname{
+   	margin-left:2px;
+}
+form input#email{
+	margin-left:31px;
+}
+form input#gender{
+	margin-left:22px;
+}
+form select#job{
+	margin-left:43px;
+}
+form input#submit{
+	margin-left:180px;
+}
+iframe{
+	position:absolute; right:0px; top:490px;
+}
+/*---------------Footer-------------*/
+footer{
+	width:100%;
+	height:600px;
+	background:#D0D0D0;
+	
+}
+.footer-title{
+	width:1160px;
+	height:auto;
+	margin-left:auto; margin-right:auto;
+	position:relative;
+}
+.football{
+	width:auto;
+	padding-top:40px;
+}
+.fanzone{
+	width:auto;
+	position:absolute; left:350px; top:40px;
+}
+.members{
+	width:auto;
+	position:absolute; left:700px; top:40px;
+}
+.shop{
+	width:auto;
+	position:absolute; left:1050px; top:40px;
+}
+#f-title{
+	font-size:15px;
+}
+.footer-title p{
+	font-size:13px;
+	color:#666666;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+	cursor:pointer;
+}
+.footer-title p:hover{
+	color:#000;
+}
+/*--language--*/
+.language{
+	margin-top:80px;
+	width:630px;
+	height:auto;
+	
+	margin-left:auto; margin-right:auto;
+	position:relative;
+}
+.English{
+	width:90px;
+	height:35px;
+	border-right:1px dotted #666666;
+}
+.English p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.English p:hover{
+	color:#000;
+}
+
+.Français{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:90px; top:0px;
+}
+.Français p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Français p:hover{
+	color:#000;
+}
+
+.Deutsch{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:180px; top:0px;
+}
+.Deutsch p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Deutsch p:hover{
+	color:#000;
+}
+
+.Vietnam{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:270px; top:0px;
+}
+.Vietnam p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Vietnam p:hover{
+	color:#000;
+}
+
+.Español{
+	width:90px;
+	height:35px;
+border-right:1px dotted #666666;
+	position:absolute; left:360px; top:0px;
+}
+.Español p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Español p:hover{
+	color:#000;
+}
+
+.Italiano{
+	width:90px;
+	height:35px;
+    border-right:1px dotted #666666;
+	position:absolute; left:450px; top:0px;
+}
+.Italiano p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Italiano p:hover{
+	color:#000;
+}
+
+.Português{
+	width:90px;
+	height:35px;
+
+	position:absolute; left:540px; top:0px;
+}
+.Português p{
+	font-size:15px;
+	padding-left:17px; padding-top:7px;
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+.Português p:hover{
+	color:#000;
+}
+.x{
+	margin-top:20px;
+	width:1160px;
+	height:10px;
+	border-bottom:1px solid #999;
+	margin-left:auto; margin-right:auto;
+}
+.logo{
+	width:460px;
+	position:relative;
+	margin-left:auto; margin-right:auto;
+	margin-top:50px;
+}
+.sub-logo1{
+		width:41px;
+		height:40px;
+}
+
+.sub-logo2{
+	position:absolute; left:70px; top:0px;	
+}
+.sub-logo3{
+	position:absolute; left:140px; top:0px;
+}
+.sub-logo4{
+	position:absolute; left:210px;  top:0px;
+}
+.sub-logo5{
+	position:absolute; left:280px; top:0px;
+}
+.sub-logo6{
+	position:absolute; left:350px;  top:0px;
+}
+.sub-logo7{
+	position:absolute; left:420px;  top:0px;
+}
+#n1{
+	text-align:center;
+	margin-top:60px;
+	font-size:12px;
+}
+#n2{
+	text-align:center;
+	font-size:12px;
+}
+#mo{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+#mo:hover{
+	opacity:0.5;
+}
+#noi{
+	transition:all 0.5s;
+	-moz-transition:all 0.5s
+	-webkit-transition:all 0.5s;
+}
+#noi:hover{
+	transform:translate;
+}
+
+.sponsor{
+	margin-top:250px;
+	width:100%;
+	height:50px;
+	background:#333;
+}
+.sponsor p{
+	padding-top:15px;
+	padding-left:1200px;
+	color:#999;
+	font-size:13px;
+}
+.sponsor strong{
+	font-size:16px;
+	color:#FFF;
+	font-family:"MS Serif", "New York", serif;
+	font-style:italic;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div class="box1"></div>
+<div class="box2"><a href="Project.html"> <b id="MinhTriCR7">MinhTriCR7</b><span id="com">.com</span></a></div>
+
+<div class="header">
+<!--Menu 0-->
+<div class="menu0">
+<a href="Project%20Live%20scores.html" >Live scores <i class="fa fa-futbol-o" aria-hidden="true"></i> </a>
+<a href="Project%20Store.html" >Store <i class="fa fa-usd" aria-hidden="true"></i> </a>
+<a href="Project%20Contact.html" >Contact <i class="fa fa-comments" aria-hidden="true"></i></a>
+<a href="#" >Login <i class="fa fa-user" aria-hidden="true"></i></a>
+<a href="#" >All sections <i class="fa fa-bars" aria-hidden="true"></i></a>
+
+</div>
+<!--Menu 0-->
+
+
+<!--Search-->
+<div class="search-box-wrapper">
+<input type="text" placeholder="Search..." class="search-box-input">
+<button class="search-box-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+</div>
+<!--Search-->
+</div>
+
+<div class="blank"></div>
+
+<div class="contact-us"><b id="Contact"> Contact to </b><b id="x"> MinhTriCR7</b><span id="y">.com</span></div>
+
+<div class="content">
+   
+<div class="branch-1">
+<span id="title"> MinhTriCR7 USA <span> 
+<p id="info"> Floor 8, Jabes Building, 244 Obama, NY, USA </p>
+<p id="info"><strong> Phone number:</strong>  (028) 626 44 996, (028) 626 44 897 </p>
+<p id="info"><strong> Email:</strong>          ngoitrongtoletgaothettenem@yahho.com</p>
+<p id="info"><strong> Website:</strong>        www.MinhTriCR7.com </p>
+<p id="info"><strong>Work time:</strong>       9:00 AM - 6:00 PM  Monday - Friday </p>
+</div>
+
+<div class="branch-2">
+<span  id="title"> MinhTriCR7 Singapore <span> 
+<p id="info"> Floor 3, Burj Khalifa Building, 8 Leedon Park, Singapore </p>
+<p id="info"><strong> Phone number:</strong>  (028) 456 44 186, (028) 456 44 123 </p>
+<p id="info"><strong> Email:</strong>          ngoitrongtoletgaothettenem@yahho.com</p>
+<p id="info"><strong> Website:</strong>        www.MinhTriCR7.com </p>
+<p id="info"><strong>Work time:</strong>       9:00 AM - 6:00 PM  Monday - Friday </p>
+</div>
+
+<div class="branch-3">
+<span  id="title"> MinhTriCR7 England <span> 
+<p id="info"> Floor 33,  Zhongguo  Building, 658 Elizabeth, Manchester, England </p>
+<p id="info"><strong> Phone number:</strong>  (333) 547 44 785, (333) 735 44 123 </p>
+<p id="info"><strong> Email:</strong>          ngoitrongtoletgaothettenem@yahho.com</p>
+<p id="info"><strong> Website:</strong>        www.MinhTriCR7.com </p>
+<p id="info"><strong>Work time:</strong>       9:00 AM - 6:00 PM  Monday - Friday </p>
+</div>
+
+<div class="branch-4">
+<span  id="title"> MinhTriCR7 Vietnam <span> 
+<p id="info">Bitexco Building, 15 Nguyen Du, TP.HCM, Vietnam </p>
+<p id="info"><strong> Phone number:</strong>  (113) 456 78 687, (114) 786 44 567 </p>
+<p id="info"><strong> Email:</strong>          ngoitrongtoletgaothettenem@yahho.com</p>
+<p id="info"><strong> Website:</strong>        www.MinhTriCR7.com </p>
+<p id="info"><strong>Work time:</strong>       9:00 AM - 6:00 PM  Monday - Friday </p>
+</div>
+
+<div class="form">
+<form method="post" action="" id="form">
+       <div>
+            <label for="name"> First name: </label>
+            <input type="text" name="name" />
+       </div>
+       <div>
+            <label for="name"> Last name: </label>
+            <input type="text" name="name" id="lastname" />
+       </div>
+       <div>
+            <label for="email"> Email: </label>
+            <input type="text" name="email" id="email" />
+            <select name="email">
+                  <option value="gmail"> @gmail.com</option>
+                  <option value="gmail"> @yahho.com</option>
+                  <option value="gmail"> @fpt.edu.vn</option>
+            </select>
+       </div>
+       <div>
+            <label for="sex"> Gender: </label>
+            <input id="gender" type="radio" name="sex" /> Male 
+            <input  id="gender" type="radio" name="sex" /> Female	
+       </div>
+       <div>
+            <label for="job"> Job: </label>
+            <select name="job" size="5" id="job">
+                   <option id="job" value="docter"> Doctor </option>
+                   <option value="techer"> Teacher </option>
+                   <option value="pilot"> Pilot </option>
+                   <option value="engineer"> Engineer </option>
+            </select>
+       </div>
+       <div>
+            <label for="notes">Your message </label>
+            <textarea name="notes" cols="40" rows="8"></textarea>  
+       </div>
+       <div>
+            <input id="submit" type="submit" value="SEND" id="button" />
+            <input  type="reset" value="CANCLE" id="button" />
+       </div> 
+</form>
+
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.439002123676!2d106.69379711538366!3d10.777649992320677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f385570472f%3A0x1787491df0ed8d6a!2zRGluaCDEkOG7mWMgTOG6rXA!5e0!3m2!1svi!2s!4v1509467471505" width="598" height="458" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+<div class="sponsor"><p> sponsor by <strong> HAIVL.COM <i class="fa fa-fort-awesome" aria-hidden="true"></i></strong></p></div>
+<!-- Footer -->
+<footer>
+<div class="footer-title">
+
+<div class="football"><p id="f-title"><b>FOOTBALL</b></p> <p>Fixtures</p> <p>News</p> <p>Video Gallery</p> <p>Photo Gallery</p> <p>Squad</p> <p>Academy</p> </div>
+<div class="fanzone"><p id="f-title"><b>FAN ZONE</b></p> <p>Videos</p> <p>Photos</p> <p>Fan Clubs</p> <p>Social Networks</p> <p>Games</p> <p>Wallpapers</p> <p>Publications</p> </div>
+<div class="members"><p id="f-title"><b>MEMBERS</b></p> <p>Members services</p> <p>Member club</p> <p>Season Ticket </p> <p>Arrangements</p> </div>
+<div class="shop"><p id="f-title"><b>SHOP</b></p> <p>Hospitality</p> <p>See all sponsors</p> <p>Site map</p>
+
+</div>
+
+<div class="language">
+
+<div class="English"><p> English </p> </div>
+<div class="Français"><p>   Français  </p></div>
+<div class="Deutsch">  <p>  Deutsch   </p>  </div>
+<div class="Vietnam">  <p>   Vietnam  </p>  </div>
+<div class="Español">   <p> Español    </p> </div>
+<div class="Italiano">  <p>   Italiano  </p> </div>
+<div class="Português">  <p>   Português  </p>  </div>
+
+</div>
+
+<div class="x"></div>
+
+<div class="logo">
+
+<div class="sub-logo1"><a href="https://twitter.com/?lang=vi"><img src="Image project/logo 1.png" width="41" height="40" usemap="#Map"></a></div>
+<div class="sub-logo2"><a href="https://www.facebook.com/minhtri.nguyen.77128" target="_blank"><img src="Image project/logo 2.png" width="41" height="40"></a> </div>
+<div class="sub-logo3"><a href="https://mail.google.com" target="_blank"><img src="Image project/logo 3.png" width="41" height="40"></a> </div>
+<div class="sub-logo4"><a href="https://www.instagram.com/?hl=vi" target="_blank"><img src="Image project/logo 4.png" width="41" height="40"></a> </div>
+<div class="sub-logo5"><a href="https://www.linkedin.com/company/uefa" target="_blank"><img src="Image project/logo 5.png" width="41" height="40"></a>  </div>
+<div class="sub-logo6"><a href="https://uefa.newsmarket.com/" target="_blank"><img src="Image project/logo 6.png" width="41" height="40"></a>  </div>
+<div class="sub-logo7"><a href="https://www.youtube.com/" target="_blank"><img src="Image project/logo 7.png" width="41" height="40"></a> </div>
+
+</div>
+
+<p id="n1" >© 1998-2017 UEFA. All rights reserved.</p>
+<p id="n2"> The UEFA word, the UEFA logo and all marks related to UEFA competitions, are protected by trademarks and/or copyright of UEFA. No use for commercial purposes may be made of such trademarks. Use of UEFA.com signifies your agreement to the Terms and Conditions and Privacy Policy.</p>
+
+</footer>
+
+
+
+
+</body>
+</html>
